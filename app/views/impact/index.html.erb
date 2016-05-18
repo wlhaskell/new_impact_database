@@ -1,0 +1,12 @@
+<div id='map-canvas'></div>
+
+<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_api_key'] %>">
+</script>
+
+<%= javascript_tag do %>
+	var coord = [];
+	<% @impacts.each do |impact| %>
+		coord.push( [<%= impact.latitude %> , <%= impact.longitude %>] );
+	<% end %>
+<% end %>
