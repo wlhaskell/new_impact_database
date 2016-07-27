@@ -7,8 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 require 'csv'
+require 'pathname'
 
-pn = Pathname.new('db\impact.csv')
+pn = Pathname.new('db/impact.csv')
 
 CSV.foreach(pn.realpath) do |row|
 	Impact.create(latitude: row[0], longitude: row[1])
