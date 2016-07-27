@@ -20,11 +20,10 @@ html{
 
 body{
 	height: 100%;
-	margin: 10px;
+	margin: 0px;
 }
 
  #map-canvas{
  	height:100%;
  	width: 100%;
-
  }

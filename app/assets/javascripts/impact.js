@@ -3,7 +3,14 @@ $(document).ready(function (){
   var mapOptions = {
     center: new google.maps.LatLng(46.837518,-113.098103),
     zoom: 3,
-
+    mapTypeId: google.maps.MapTypeId.SATELLITE,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+      mapTypeIds: [
+        google.maps.MapTypeId.SATELLITE,
+        google.maps.MapTypeId.HYBRID
+      ]
+    }
   };
     
   var map = new google.maps.Map(document.getElementById('map-canvas'),

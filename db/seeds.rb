@@ -8,6 +8,8 @@
 
 require 'csv'
 
-CSV.foreach('C:\Users\whaskell\Documents\Reference\TTS\Rails\impact_practice\db\impact.csv') do |row|
+pn = Pathname.new('db\impact.csv')
+
+CSV.foreach(pn.realpath) do |row|
 	Impact.create(latitude: row[0], longitude: row[1])
 end
